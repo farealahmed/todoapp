@@ -14,7 +14,7 @@ function App() {
       >
         <Link to="/invoices">Invoices</Link> |{" "}
         <Link to="/expenses">Expenses</Link> |{" "}
-        <Link to="/add-todo">Add</Link>  |{" "}
+        <Link to="/todo-entry">Add</Link>  |{" "}
         <Link to="/list-todo">List</Link>
       </nav>
       <Outlet />
