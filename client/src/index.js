@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Expenses from "./routes/expenses";
@@ -9,6 +9,8 @@ import Invoices from "./routes/invoices";
 import Invoice from "./routes/invoice";
 import TodoEntry from "./routes/todo-entry";
 import TodoList from "./routes/todo-list";
+import TodoDetail from "./routes/todo-detail";
+import TodoEdit from "./routes/todo-edit";
 
 
 
@@ -22,8 +24,14 @@ ReactDOM.render(
             <Route path=":invoiceId" element={<Invoice />} />
           </Route>
           <Route path="todo-entry" element={<TodoEntry />} />
-          <Route path="list-todo" element={<TodoList />} />
+          <Route path="list-todo" element={<TodoList />}>
+             <Route path=":todoId" element={<TodoDetail />} />
+             <Route path="edit/:todoId" element={<TodoEdit />}>
 
+          </Route>
+
+
+          </Route>
           <Route
             path="*"
             element={

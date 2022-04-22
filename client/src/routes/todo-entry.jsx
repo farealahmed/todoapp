@@ -10,7 +10,7 @@ const Basic = () => {
     const onSubmit = async (event) => {
         event.preventDefault();
         const r = await axios.post('http://localhost:3001/api/v1/todos', {
-            "name": event.target.name.value,
+            "name": name,
             "description": "world"
         });
         console.log('response', r);
